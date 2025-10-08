@@ -1,8 +1,9 @@
 # transApp/urls.py
+# transApp/urls.py
 from django.urls import path
-from .views import ExtractTextAPI
+from .views import ExtractTransliterateAPI
 
 urlpatterns = [
-    path("extract-text/", ExtractTextAPI.as_view(), name="extract_text"),
+    path("extract-text/<str:transLang>/", ExtractTransliterateAPI.as_view(), name="extract_text"),
 ]
 
