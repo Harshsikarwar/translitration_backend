@@ -5,7 +5,7 @@ import base64
 import google.generativeai as genai
 from aksharamukha import transliterate
 
-genai.configure(api_key="AIzaSyCoeyMGqYHk2S4q1ifuPhwZVKBsUpz3ws4")  # <-- Replace this with your actual key
+genai.configure(api_key="AIzaSyCoeyMGqYHk2S4q1ifuPhwZVKBsUpz3ws4")
 
 def extract_text_from_image(image_file, prompt):
     try:
@@ -17,7 +17,7 @@ def extract_text_from_image(image_file, prompt):
             [
                 prompt,
                 {
-                    "mime_type": "image/png",  # Adjust if needed
+                    "mime_type": "image/png",  
                     "data": image_b64,
                 },
             ]
